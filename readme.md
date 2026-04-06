@@ -1,8 +1,9 @@
 <div align="center">
 
-# 🔧 Awesome Engineering AI🔧
+# 🔧 Awesome Physical Engineering AI🔧
 
-<img width="460" height="232" alt="image" src="https://github.com/user-attachments/assets/07e99d66-f26e-4985-8078-c5f28dce1857" />
+<img width="460" height="232" alt="image" src="<img width="995" height="430" alt="image" src="https://github.com/user-attachments/assets/59b75d8f-be40-461d-a701-3865d0b71f1f" />
+" />
 
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
