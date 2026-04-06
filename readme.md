@@ -2,19 +2,15 @@
 
 # 🔧 Awesome Physical Engineering AI🔧
 
-<img width="460" height="232" alt="image" src="<img width="995" height="430" alt="image" src="https://github.com/user-attachments/assets/59b75d8f-be40-461d-a701-3865d0b71f1f" />
-" />
+<img width="460" height="232" alt="image" src="https://github.com/user-attachments/assets/59b75d8f-be40-461d-a701-3865d0b71f1f"/>
 
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![Last Update](https://img.shields.io/badge/Last_Update-April_2026-blue.svg)](#)
 
-**A curated list of AI tools for hardware engineering — CAD, simulation, manufacturing, and beyond.**
+**🔧 A curated list of AI tools for engineers who work with the physical world — CAD, FEA, CFD, manufacturing, and beyond.**
 
-Software engineers have thousands of AI tools.<br>
-Hardware engineers get an afterthought sidebar.<br>
-**This list fixes that.**
 
 [Submit a Tool](#contributing) · [Report Broken Link](../../issues/new) · [Suggest Category](../../issues/new)
 
