@@ -18,18 +18,37 @@
 
 ---
 
+> [!TIP]
+> **🆕 What's new in 2026:** Two new categories — **[💰 Cost Estimation & Instant Quoting](#-cost-estimation--instant-quoting-)** (aPriori, CloudNC Cycle Time Estimator, Machine Research, Dashnode, Kapow) and **[🧠 AI Agents for Engineering](#-ai-agents-for-engineering-)** (Aibuild OS with "Digital Engineers", SimScale Engineering AI Agent, Synopsys AgentEngineer, Siemens Fuse EDA, NVIDIA Agent Toolkit). NVIDIA renamed Modulus → **[PhysicsNeMo](https://github.com/NVIDIA/physicsnemo)**. New conversational CAD agents: **[Zookeeper](https://zoo.dev)** (Zoo) and **[Adam CAD](https://adam.new)**. **[Altair HyperWorks 2026](https://altair.com/hyperworks)** ships with geometric deep learning. New SolidWorks + Onshape + Blender + KiCad MCP servers. New ICLR 2026 papers: **Cadrille**, **Seek-CAD**, **ToolCAD**.
+
+---
+
+## 🗺️ The Physical Engineering AI Stack
+
+> How the categories in this list fit together. **Design → Validate → Price → Make → Inspect → Operate**, with AI agents, MCP, and open-source foundations cutting across every stage.
+
+<img width="2816" height="1536" alt="AwesomeengineeringAI" src="https://github.com/user-attachments/assets/712d83d7-3b8d-47cd-86a1-3c5ac5f1e327" />
+
+
+> [!NOTE]
+> **How to read this:**  The main flow (left to right) is the physical product lifecycle, containing vertical sub-steps. The bottom layer is the cross-cutting infrastructure that orchestrates every stage. Every tool fits into one of these boxes. When a new tool drops, ask: "Which stage or infra module does this live in?"
+
+---
+
 ## Contents
 
 - [🎨 CAD AI & Generative Geometry](#-cad-ai--generative-geometry)
 - [⚡ Generative & Topology Optimization](#-generative--topology-optimization)
 - [🧪 AI-Powered Simulation](#-ai-powered-simulation)
 - [🏭 Design for Manufacturing (DFM)](#-design-for-manufacturing-dfm)
+- [💰 Cost Estimation & Instant Quoting 🆕](#-cost-estimation--instant-quoting-)
 - [⚙️ CAM & CNC AI](#%EF%B8%8F-cam--cnc-ai)
 - [👁️ Quality Inspection & Computer Vision](#%EF%B8%8F-quality-inspection--computer-vision)
 - [🔮 Digital Twins & Predictive Maintenance](#-digital-twins--predictive-maintenance)
 - [🔢 Engineering Calculations & Computation](#-engineering-calculations--computation)
 - [🧱 Materials & Material Selection](#-materials--material-selection)
 - [🔌 MCP Servers for Engineering](#-mcp-servers-for-engineering)
+- [🧠 AI Agents for Engineering 🆕](#-ai-agents-for-engineering-)
 - [🤖 Robotics & Controls](#-robotics--controls)
 - [🖨️ 3D Printing & Additive Manufacturing](#%EF%B8%8F-3d-printing--additive-manufacturing)
 - [📦 PLM, PDM & Knowledge Management](#-plm-pdm--knowledge-management)
@@ -46,7 +65,8 @@
 
 | Tool | Type | What it does | Open Source |
 |------|------|-------------|:-----------:|
-| [Zoo Design Studio](https://zoo.dev) | Platform | Text-to-CAD generating editable B-Rep STEP files via KCL language | Partial |
+| [Adam CAD](https://adam.new) | Platform | 🆕 AI-native CAD. Text-to-3D with parametric control. v1.0 launched Jan 2025, $4.1M seed. Onshape plugin + web app. Part editing via prompts | ❌ |
+| [Zoo Design Studio + Zookeeper](https://zoo.dev) | Platform | 🆕 Zookeeper is a conversational CAD agent (2026) with reasoning, geometry inspection, and debug tools. Text-to-CAD outputs editable B-Rep STEP via KCL | Partial |
 | [Spectral Labs (SGS-1)](https://spectrallabs.co) | Platform | Generates parametric 3D models from text, sketches, or 3D scans | ❌ |
 | [Tripo](https://tripo3d.ai) | Platform | High-quality text/image-to-3D. Exports FBX, GLB, OBJ. Blender/Unity plugins | Partial |
 | [Meshy](https://meshy.ai) | Platform | Text-to-3D and image-to-3D with PBR textures. Rapid prototyping | ❌ |
@@ -87,11 +107,13 @@
 |------|----------|---------|:-----------:|
 | [Ansys SimAI](https://www.ansys.com/products/simai) | Generative AI trained on historical simulation data | 10-100x | ❌ |
 | [Ansys Engineering Copilot](https://www.ansys.com) | NL assistant in Discovery & Fluent | Setup time | ❌ |
-| [Altair PhysicsAI](https://altair.com) | Trained surrogates replacing solvers | 100-1000x | ❌ |
+| [Altair HyperWorks 2026](https://altair.com/hyperworks) | 🆕 Geometric deep learning + GPU-accelerated reduced order models (ROM). Near-real-time predictions. Part of Siemens post-acquisition | 100-1000x | ❌ |
 | [Neural Concept](https://www.neuralconcept.com) | Deep learning for aero/thermal from 3D geometry | Real-time | ❌ |
-| [SimScale](https://www.simscale.com) | Cloud CFD/FEA with AI-driven meshing | Variable | ❌ |
+| [SimScale AI](https://www.simscale.com) | 🆕 Now "AI-native" cloud platform. Integrated Engineering AI agent drives workflows autonomously. CFD/FEA/EM/Thermal in one stack | 2.8x avg | ❌ |
 | [Productive Machines (SenseNC)](https://www.productivemachines.com) | AI milling optimization: chatter, tool wear, breakage prediction | 2-5x tool life | ❌ |
-| [NVIDIA Modulus](https://developer.nvidia.com/modulus) | Framework for physics-informed neural networks | GPU-accel | ✅ |
+| [NVIDIA PhysicsNeMo](https://github.com/NVIDIA/physicsnemo) | 🆕 Successor to Modulus. Open-source Physics-ML framework. Neural operators, GNNs, transformers, PINNs at scale. Apache 2.0 | GPU-accel | ✅ |
+| [PhysicsNeMo-CFD](https://github.com/NVIDIA/physicsnemo-cfd) | 🆕 CFD sub-module: pretrained AI models (DoMINO Automotive Aero NIM), benchmarks, CFD workflows | Real-time | ✅ |
+| [FEATool Multiphysics 1.18](https://www.featool.com) | 🆕 Feb 2026 release: redesigned GUI, one-click export to MATLAB/Python for PINN/ML pipelines. OpenFOAM, FEniCS, SU2 integration | Variable | Partial |
 | [PhiFlow](https://github.com/tum-pbs/PhiFlow) | Differentiable PDE solving (PyTorch/TF/JAX) | Variable | ✅ |
 | [DeepXDE](https://github.com/lululxvi/deepxde) | PINNs and deep operator networks | Variable | ✅ |
 | [FourCastNet](https://github.com/NVlabs/FourCastNet) | Fourier neural operators for high-res prediction | 1000x+ | ✅ |
@@ -111,6 +133,28 @@
 | [DFMPro](https://dfmpro.geometricglobal.com) | Rules-based checks: machining, molding, casting, sheet metal | SW, Creo, NX, CATIA | ❌ |
 | [Xometry Instant Quoting](https://www.xometry.com) | AI-powered quotes with DFM feedback | Upload STEP/STL | ❌ |
 | [Hubs (Protolabs)](https://www.hubs.com) | Instant DFM analysis + quoting for CNC, 3D printing, injection molding | Upload STEP/STL | ❌ |
+
+<br>
+
+## 💰 Cost Estimation & Instant Quoting 🆕
+
+> 🆕 **New category (2026).** AI that turns CAD files into **cost estimates, cycle times, and ready-to-send quotes** in minutes. The bridge between DFM and CAM.
+
+| Tool | What it does | Best For | Open Source |
+|------|-------------|---------|:-----------:|
+| [aPriori](https://www.apriori.com) | 🆕 AI-powered digital twin for cost, quality, and sustainability insights across product lifecycle. Regional cost models for 80+ countries | Enterprise OEMs needing should-cost analysis | ❌ |
+| [CloudNC Cycle Time Estimator](https://www.cloudnc.com) | Accelerates CNC quoting up to 20x by auto-generating cycle times and toolpath strategies in bulk for 3-axis and 3+2 parts | Shops already using CAM Assist in Mastercam/Fusion | ❌ |
+| [Toolpath Estimating](https://toolpath.com/platform/estimating) | Auto-generates machining plans and time estimates for 3-axis CNC using your Fusion tool library and cutting parameters | Fusion-native shops | ❌ |
+| [Machine Research](https://machineresearch.com) | 🆕 AI scans CAD models to generate instant time + cost estimates for programming, setup, and production. Learns from job outcomes | Small-to-mid CNC job shops | ❌ |
+| [DigiFabster](https://digifabster.com) | ML-based instant quoting across CNC, additive, sheet metal, waterjet, turning. ~99% accuracy. Customer-facing portal or backoffice | Shops wanting a customer-facing quoting portal | ❌ |
+| [Kapow](https://www.kapow.ai) | 🆕 Cloud-based instant quoting with AI material and process recommendations from CAD. CNC, 3D printing, injection molding | Mixed-process contract manufacturers | ❌ |
+| [Spanflug MAKE](https://spanflug.de/en/make/) | Automatic part analysis for turning and milling. Calculates optimal machining steps, stocks, and tool requirements with real-time stock prices | European machine shops (EU pricing/stock integration) | ❌ |
+| [AutoCut](https://autocut.app/) | 🆕 AI quoting for routers, fiber/CO2 lasers, water jets, plasma cutters. Multi-machine routing and optimization | Sheet/plate fabrication shops with mixed machine fleet | ❌ |
+| [Dashnode ACE](https://www.dashnode.ai) | 🆕 Feature-based pricing with smart tolerance recognition, DFM insights, and surface finish intelligence. Built for INR pricing | India-based manufacturers | ❌ |
+| [Costimator](https://www.costimator.com) | Shop-floor-based cost estimating with 750+ built-in cost models across machining, fabrication, assembly | Job shops wanting rules-based (not black-box) estimates | ❌ |
+
+> [!TIP]
+> **The quoting stack pattern in 2026:** Upload STEP → DFM tool flags issues (bananaz, CoLab) → Quoting tool extracts features + generates cost (aPriori, CloudNC, Dashnode) → CAM tool turns it into programs (CAM Assist, Toolpath) → Quote goes out in minutes instead of days.
 
 <br>
 
@@ -215,10 +259,41 @@
 | [freecad-mcp](https://github.com/neka-nat/freecad-mcp) (neka-nat) | FreeCAD | Documents, primitives, booleans, export, remote control | ⭐ Most complete |
 | [freecad-mcp](https://github.com/contextform/freecad-mcp) (contextform) | FreeCAD | PartDesign (13 ops), Part (18 ops). One-command npm install | ⭐ Easiest setup |
 | [freecad-mcp](https://github.com/bonninr/freecad_mcp) (bonninr) | FreeCAD | Script execution, scene inspection | — |
+| [SolidworksMCP-TS](https://github.com/vespo92/SolidworksMCP-TS) | SolidWorks | 🆕 88 tools. Intelligent COM bridge with VBA fallback for 13+ param methods (extrusions, sweeps, lofts). Node.js | ⭐ 2026 |
+| [mcp-server-solidworks](https://github.com/eyfel/mcp-server-solidworks) | SolidWorks | 🆕 Python + C# adapter + COM bridge. Version-aware. Real-time context streaming | — |
+| [Onshape MCP](https://www.reer.co/solution) | Onshape | 🆕 Cloud-native REST API integration. Document management, feature manipulation, assembly ops. TypeScript/Zod | — |
+| [Blender MCP](https://github.com/ahujasid/blender-mcp) | Blender | 🆕 17.8k stars. Scene manipulation, Poly Haven assets, Hyper3D Rodin integration. MIT | ⭐ Most popular |
+| [KiCad MCP](https://github.com/lamaalrajih/kicad-mcp) | KiCad | 🆕 Netlist, BOM, DRC, PCB visualization for electronics design | — |
 | [cadquery-mcp-server](https://github.com/rishigundakaram/cadquery-mcp-server) | CadQuery | NL → parametric CAD with geometric verification | — |
 | [mcp-cadquery](https://github.com/bertvanbrakel/mcp-cadquery) | CadQuery | Full-featured: scripts, SVG export, part library | — |
 | [CAD-MCP](https://github.com/daobataotie/CAD-MCP) | AutoCAD+ | Controls AutoCAD, GstarCAD, ZWCAD via natural language | — |
 | [predictive-maintenance-mcp](https://github.com/LGDiMaggio/predictive-maintenance-mcp) | PdM | Vibration analysis, bearing faults, ML anomaly detection, ISO reports | ⭐ Unique |
+
+<br>
+
+## 🧠 AI Agents for Engineering 🆕
+
+> 🆕 **New category (2026).** Autonomous agents that plan and execute multi-step engineering workflows across CAD, CAE, and CAM, going beyond chat copilots. If MCP is the protocol, **this is what you build on top**.
+
+> [!IMPORTANT]
+> **Copilots vs. Autonomous Agents — know the difference.** Per the [SimScale 2026 State of Engineering AI Report](https://www.simscale.com), copilots (engineer-assisted) have 67-76% adoption across product development stages, while fully autonomous agents remain at ~10%. The high-consequence nature of engineering keeps humans in the loop. Pattern in 2026: **human-prompted → agent-executed → human-reviewed**.
+
+| Tool | Autonomy Level | What it does | Open Source |
+|------|---------------|-------------|:-----------:|
+| [Aibuild OS](https://ai-build.com) | 🆕 Autonomous | "Digital Engineers" that plan and execute CAD → CAE → CAM workflows end-to-end. From Ford/Boeing partner Aibuild. Launched March 2026 | ❌ |
+| [Ansys Engineering Copilot](https://www.ansys.com) | Copilot | Natural language assistant embedded in Discovery and Fluent for setup, meshing, and results interpretation | ❌ |
+| [SimScale Engineering AI Agent](https://www.simscale.com) | 🆕 Copilot → Agent | Autonomously drives simulation workflows across CFD/FEA/EM/Thermal. Collaborates with enterprise tool stack via APIs | ❌ |
+| [Synopsys AgentEngineer](https://www.synopsys.com) | 🆕 Multi-agent | Multi-agent framework for semiconductor and systems design. Built on NVIDIA Nemotron + Nemo Agent Toolkit | ❌ |
+| [Siemens Fuse EDA AI Agent](https://www.siemens.com/global/en/products/software/eda.html) | 🆕 Autonomous | Orchestrates domain-scoped workflows across Siemens EDA portfolio for semiconductors and PCBs, from design through manufacturing sign-off | ❌ |
+| [CoLab AutoReview](https://www.colabsoftware.com) | Agentic | Multi-step agentic design review: title blocks, callouts, DFM, cross-view consistency. Reads native CAD | ❌ |
+| [Leo AI](https://www.getleo.ai) | Copilot | Engineering Q&A agent grounded in PLM data + 1M sources. Cites sources for regulated environments | ❌ |
+| [NVIDIA Agent Toolkit](https://developer.nvidia.com/nemo-agent-toolkit) | 🆕 Framework | Open source framework for building autonomous enterprise agents. Includes OpenShell runtime for policy-based security guardrails | ✅ |
+| [LangChain](https://github.com/langchain-ai/langchain) | Framework | General-purpose agent framework. Used by most engineering agents in production | ✅ |
+| [LangGraph](https://github.com/langchain-ai/langgraph) | Framework | Stateful, multi-actor agent workflows. Better suited than plain LangChain for engineering pipelines | ✅ |
+| [CrewAI](https://github.com/crewAIInc/crewAI) | Framework | Role-based multi-agent orchestration. Good for modeling engineering team dynamics (designer → analyst → reviewer) | ✅ |
+
+> [!TIP]
+> **Building your own engineering agent?** The stack in 2026 is roughly: **LLM** (Claude Opus / GPT / Nemotron) → **agent framework** (LangGraph / Agent Toolkit) → **tools via MCP** (see section above) → **CAD/CAE/CAM** (via their APIs or MCP servers). Start small: one workflow, strong guardrails, human review on every output.
 
 <br>
 
@@ -325,6 +400,10 @@
 
 | Paper | Venue | Contribution |
 |-------|-------|-------------|
+| [Cadrille](https://arxiv.org/abs/2506.13324) | ICLR 2026 | 🆕 Multi-modal CAD reconstruction with online reinforcement learning |
+| [Seek-CAD](https://arxiv.org/abs/2505.20694) | ICLR 2026 | 🆕 Self-refined generative CAD using DeepSeek-R1 + Gemini-2.0 visual feedback |
+| [ToolCAD](https://arxiv.org/abs/2604.07960) | 2026 | 🆕 Tool-using LLMs as CAD agents with curriculum online RL and CAD-CoT |
+| [CAD-Llama](https://arxiv.org/abs/2505.04481) | CVPR 2025 | 🆕 Instruction-tuned LLaMA3-8B with Structured Parametric CAD Code (SPCC) |
 | [Text2CAD](https://arxiv.org/abs/2409.17106) | NeurIPS 2024 Spotlight | Sequential CAD from beginner-to-expert text prompts |
 | [DeepCAD](https://github.com/ChrisWu1997/DeepCAD) | ICCV 2021 | Deep generative network for CAD autocompletion |
 | [BrepGen](https://arxiv.org/abs/2401.15563) | 2024 | B-Rep model generation via diffusion |
@@ -405,6 +484,7 @@
 | [awsomeEngSci](https://github.com/Foadsf/awsomeEngSci) | Comprehensive FOSS list for engineering & science |
 | [awesome-digital-twins](https://github.com/edt-community/awesome-digital-twins) | Papers, frameworks, and tools for digital twins |
 | [Roboflow Universe](https://universe.roboflow.com) | 200M+ images, 200K+ open datasets for CV model training |
+| [SimScale 2026 State of Engineering AI Report](https://www.simscale.com) | 🆕 Survey of 350 engineering leaders. AI-enabled workflows generate ~4x more design variants |
 
 <br>
 
