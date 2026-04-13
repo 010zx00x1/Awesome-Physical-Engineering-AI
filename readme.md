@@ -267,6 +267,7 @@
 | [cadquery-mcp-server](https://github.com/rishigundakaram/cadquery-mcp-server) | CadQuery | NL → parametric CAD with geometric verification | — |
 | [mcp-cadquery](https://github.com/bertvanbrakel/mcp-cadquery) | CadQuery | Full-featured: scripts, SVG export, part library | — |
 | [CAD-MCP](https://github.com/daobataotie/CAD-MCP) | AutoCAD+ | Controls AutoCAD, GstarCAD, ZWCAD via natural language | — |
+| [Cosmon MCP Servers](https://cosmon.com) | Multi-platform | 🆕 MCP servers for Abaqus, COMSOL, SolidWorks, Ansys Mechanical, Ansys Fluent, Ansys Electronics, and Onshape. Run locally alongside CAD/CAE software. Powers the Cosmon AI engineering copilot | ❌ |
 | [predictive-maintenance-mcp](https://github.com/LGDiMaggio/predictive-maintenance-mcp) | PdM | Vibration analysis, bearing faults, ML anomaly detection, ISO reports | ⭐ Unique |
 
 <br>
@@ -285,6 +286,7 @@
 | [SimScale Engineering AI Agent](https://www.simscale.com) | 🆕 Copilot → Agent | Autonomously drives simulation workflows across CFD/FEA/EM/Thermal. Collaborates with enterprise tool stack via APIs | ❌ |
 | [Synopsys AgentEngineer](https://www.synopsys.com) | 🆕 Multi-agent | Multi-agent framework for semiconductor and systems design. Built on NVIDIA Nemotron + Nemo Agent Toolkit | ❌ |
 | [Siemens Fuse EDA AI Agent](https://www.siemens.com/global/en/products/software/eda.html) | 🆕 Autonomous | Orchestrates domain-scoped workflows across Siemens EDA portfolio for semiconductors and PCBs, from design through manufacturing sign-off | ❌ |
+| [Cosmon](https://cosmon.com) | 🆕 Copilot → Agent | AI engineering copilot for CAD & simulation. Integrates with SolidWorks, Abaqus, COMSOL, Ansys (Mechanical, Fluent, Electronics), and Onshape via MCP servers. Executes platform-specific code, manages simulation workflows, and reasons about results | ❌ |
 | [CoLab AutoReview](https://www.colabsoftware.com) | Agentic | Multi-step agentic design review: title blocks, callouts, DFM, cross-view consistency. Reads native CAD | ❌ |
 | [Leo AI](https://www.getleo.ai) | Copilot | Engineering Q&A agent grounded in PLM data + 1M sources. Cites sources for regulated environments | ❌ |
 | [NVIDIA Agent Toolkit](https://developer.nvidia.com/nemo-agent-toolkit) | 🆕 Framework | Open source framework for building autonomous enterprise agents. Includes OpenShell runtime for policy-based security guardrails | ✅ |
