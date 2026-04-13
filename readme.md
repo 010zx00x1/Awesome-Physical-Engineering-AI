@@ -285,6 +285,7 @@
 | [SimScale Engineering AI Agent](https://www.simscale.com) | 🆕 Copilot → Agent | Autonomously drives simulation workflows across CFD/FEA/EM/Thermal. Collaborates with enterprise tool stack via APIs | ❌ |
 | [Synopsys AgentEngineer](https://www.synopsys.com) | 🆕 Multi-agent | Multi-agent framework for semiconductor and systems design. Built on NVIDIA Nemotron + Nemo Agent Toolkit | ❌ |
 | [Siemens Fuse EDA AI Agent](https://www.siemens.com/global/en/products/software/eda.html) | 🆕 Autonomous | Orchestrates domain-scoped workflows across Siemens EDA portfolio for semiconductors and PCBs, from design through manufacturing sign-off | ❌ |
+| [Cosmon](https://cosmon.com) | 🆕 Copilot → Agent | AI engineering copilot for CAD & simulation. Integrates with SolidWorks, Abaqus, COMSOL, and Ansys (Mechanical, Fluent, Electronics). Executes platform-specific code, manages simulation workflows, and reasons about results | ❌ |
 | [CoLab AutoReview](https://www.colabsoftware.com) | Agentic | Multi-step agentic design review: title blocks, callouts, DFM, cross-view consistency. Reads native CAD | ❌ |
 | [Leo AI](https://www.getleo.ai) | Copilot | Engineering Q&A agent grounded in PLM data + 1M sources. Cites sources for regulated environments | ❌ |
 | [NVIDIA Agent Toolkit](https://developer.nvidia.com/nemo-agent-toolkit) | 🆕 Framework | Open source framework for building autonomous enterprise agents. Includes OpenShell runtime for policy-based security guardrails | ✅ |
