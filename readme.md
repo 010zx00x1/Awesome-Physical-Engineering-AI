@@ -7,7 +7,7 @@
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
-[![Last Update](https://img.shields.io/badge/Last_Update-April_2026-blue.svg)](#)
+[![Last Update](https://img.shields.io/badge/Last_Update-May_2026-blue.svg)](#)
 
 **A curated list of AI tools for engineers who work with the physical world — CAD, CAE, CFD, CAM, manufacturing, inspection, materials, and digital twins.**
 
@@ -18,9 +18,11 @@
 ---
 
 > [!TIP]
-> **What changed in this cleaned 2026 version:** suspicious or mismatched links were removed or corrected; generic AI frameworks were moved out of the core app lists; visual text-to-3D tools are labeled as concept/mesh tools instead of engineering CAD; and research prototypes are separated from production tools.
+> **What changed in this May 2026 audit:** Added a whole new category of first-party MCP connectors for design software.
 >
-> Major fixes: **Spectral Labs SGS-1** now points to `spectrallabs.ai`, **CADscribe** now points to `cadscribelabs.com`, **Lambda Function** now points to `lambdafunction.ai`, **Productive Machines / SenseNC** now points to `productivemachines.co.uk`, **Onshape MCP** now points to a real GitHub MCP server, and **Kapow** was removed because it is not an engineering quoting/manufacturing tool.
+> - **🆕 Major addition — Official MCP connectors from CAD/design vendors:** new dedicated section [⭐ Official MCP Connectors from Design Software Vendors](#-official-mcp-connectors-from-design-software-vendors) covering Autodesk Fusion MCP, Autodesk Fusion Data MCP, the official Blender Lab MCP server, and the SketchUp Connector. These shipped on **April 28, 2026** as part of Anthropic's "Claude for Creative Work" launch.
+> - **🆕 Added (community MCPs):** STK-MCP (Ansys/AGI STK mission engineering), OpenFOAM MCP server, Jarvis Onshape MCP, Joe-Spencer Fusion MCP, plus a couple of newer 2026 papers / commercial launches.
+
 
 ---
 
@@ -47,6 +49,7 @@
 - [🔮 Digital Twins & Predictive Maintenance](#-digital-twins--predictive-maintenance)
 - [🔢 Engineering Calculations & Computation](#-engineering-calculations--computation)
 - [🧱 Materials & Material Selection](#-materials--material-selection)
+- [⭐ Official MCP Connectors from Design Software Vendors](#-official-mcp-connectors-from-design-software-vendors)
 - [🔌 MCP Servers for Engineering](#-mcp-servers-for-engineering)
 - [🧠 AI Agents for Engineering](#-ai-agents-for-engineering)
 - [🤖 Robotics & Controls](#-robotics--controls)
@@ -104,7 +107,7 @@
 | [MSC Apex Generative Design](https://hexagon.com/products/product-groups/computer-aided-engineering-software) | Optimization with production-oriented geometry workflows | CAE-heavy teams | ❌ |
 | [PTC Creo Generative Design](https://www.ptc.com/en/products/creo/generative-design) | Cloud optimization and native Creo output | Creo-native workflows | ❌ |
 | [Altair HyperWorks](https://altair.com/hyperworks) | Optimization, design exploration, surrogate models, and CAE automation | High-throughput simulation teams | ❌ |
-| [Monolith](https://www.monolithai.com) | No-code AI models from test and simulation data | Teams without dedicated ML teams | ❌ |
+| [Monolith](https://www.monolithai.com) | No-code AI models from test and simulation data; MCP-enabled workflows | Teams without dedicated ML teams | ❌ |
 
 ---
 
@@ -218,7 +221,6 @@
 | [Azure Digital Twins](https://azure.microsoft.com/en-us/products/digital-twins) | Cloud platform for modeling physical environments and relationships | ❌ |
 | [AWS IoT TwinMaker](https://aws.amazon.com/iot-twinmaker/) | Build digital twins from IoT data, video, and 3D assets | ❌ |
 | [predictive-maintenance-mcp](https://github.com/LGDiMaggio/predictive-maintenance-mcp) | MCP server for vibration analysis, bearing fault detection, and ISO-style reporting | ✅ |
-| [Open Source Digital Twin](https://github.com/Open-Source-Digital-Twin) | Motion-control playground and controller for digital twin research | ✅ |
 | [awesome-digital-twins](https://github.com/edt-community/awesome-digital-twins) | Curated list of digital twin resources, papers, and frameworks | ✅ |
 
 ---
@@ -259,9 +261,36 @@
 
 ---
 
+## ⭐ Official MCP Connectors from Design Software Vendors
+
+> **Launched on April 28, 2026** as part of Anthropic's [Claude for Creative Work](https://www.anthropic.com/news/claude-for-creative-work) initiative. These are **first-party MCP integrations** built by — or in direct collaboration with — the actual CAD/3D vendors, distributed through Claude's official Connectors directory. Unlike community MCP servers, these come with vendor-maintained documentation, security boundaries aligned to the vendor's product standards, and one-click setup from `claude.ai/connectors`.
+
+> [!IMPORTANT]
+> Because every one of these connectors is built on the open Model Context Protocol, they also work with **non-Claude MCP clients** such as Cursor, VS Code, Windsurf, and Claude Code. They are official Claude *partner* integrations, not Claude-exclusive ones.
+
+| Connector | Vendor | What it exposes | Source | Plan |
+|----------|--------|-----------------|--------|:----:|
+| [Autodesk Fusion MCP](https://aps.autodesk.com/blog/bringing-fusion-claude-creative-work) | Autodesk | **Action-oriented** — turn natural language into Fusion design actions: create/modify 3D models, iterate on existing geometry, automate repetitive modeling steps. Runs **locally** and requires Fusion to be running; compatible with Claude Desktop, Cursor, and any MCP-capable HTTP client. | [autodesk.com/.../fusion-mcp](https://www.autodesk.com/products/fusion-360/blog/introducing-the-fusion-mcp-opening-fusion-to-ai-powered-workflows/) | Fusion subscription required |
+| [Autodesk Fusion Data MCP](https://adsknews.autodesk.com/en/news/design-manufacturing-autodesk-assistant/) | Autodesk | **Data-oriented** — search, query, and reuse design data across projects via Autodesk's cloud services. Runs **remotely** and does *not* require Fusion to be running; compatible with Claude Desktop and VS Code. | [Autodesk MCP Servers](https://www.autodesk.com/solutions/autodesk-ai/autodesk-mcp-servers) | Fusion subscription required |
+| [Blender Lab MCP Server](https://www.blender.org/lab/mcp-server/) ⭐ official | Blender Foundation (Blender Lab) | Exposes Blender's full **Python API (`bpy`)** as MCP tools. Lets Claude analyze and debug entire Blender scenes, batch-apply changes to objects, write Python scripts that add new tools to Blender's interface, and explain complex Geometry Nodes setups. | [blender.org/lab/mcp-server/](https://www.blender.org/lab/mcp-server/) | Free (Blender 4.2+) |
+| [SketchUp Connector for Claude](https://architosh.com/2026/05/sketchup-adds-anthropics-claude-ai-powered-3d-modeling/) | Trimble / SketchUp | Conversational interface to SketchUp; generates 3D models from text or image prompts and interacts directly with `.skp` files. Useful for architectural / building visualization starts before pushing to CAD. | Claude Connectors directory | SketchUp account |
+
+### How the official Blender connector differs from the community one
+
+The community-built [`ahujasid/blender-mcp`](https://github.com/ahujasid/blender-mcp) (already listed under [MCP Servers for Engineering](#-mcp-servers-for-engineering)) was the *project that pioneered the pattern* and remains useful for arbitrary MCP clients. The official Blender Lab MCP server is a **separate, first-party project** maintained inside the Blender Foundation, distributed via drag-and-drop install from `blender.org`, and one-click-installable from Claude's Connectors directory. Anthropic also became a Corporate Patron of the Blender Development Fund alongside the launch. Both speak MCP and both drive `bpy`; choose the official one for the supported path, the community one for non-Claude clients or experimentation.
+
+### Why this matters for engineering
+
+For the first time, the leading commercial parametric CAD vendor (**Autodesk Fusion**), the leading open-source 3D suite (**Blender**), and a major architectural / conceptual modeler (**SketchUp**) all ship official AI agent integrations using the same protocol. This is a meaningful step beyond chat copilots: Claude (or any MCP client) can now read live design context and execute structured actions inside these tools, not just discuss them. Autodesk's documentation also signals that **Revit** and an Autodesk documentation MCP are likely next.
+
+> [!WARNING]
+> These connectors execute real actions inside production design files. The Blender connector in particular runs arbitrary Python — save your work before each session, work in a copy when experimenting, and review the script Claude proposes when the change is destructive. The Autodesk Fusion MCP keeps execution inside Fusion's permissioned environment, but the same general caution applies: dry-run, version-control, and human review remain best practice.
+
+---
+
 ## 🔌 MCP Servers for Engineering
 
-> [Model Context Protocol](https://modelcontextprotocol.io) servers that let AI agents control or query engineering tools.
+> Community-built and experimental [Model Context Protocol](https://modelcontextprotocol.io) servers that let AI agents control or query engineering tools. For **official vendor connectors** (Autodesk Fusion, Blender Lab, SketchUp), see the [⭐ Official MCP Connectors](#-official-mcp-connectors-from-design-software-vendors) section above.
 
 > [!TIP]
 > MCP servers are most useful when paired with strong guardrails: dry-run mode, explicit human approval, file backups, and version control.
@@ -274,13 +303,17 @@
 | [SolidworksMCP-TS](https://github.com/vespo92/SolidworksMCP-TS) | SolidWorks | Node.js COM bridge and SolidWorks automation tools | Active OSS |
 | [mcp-server-solidworks](https://github.com/eyfel/mcp-server-solidworks) | SolidWorks | Python/C# adapter, COM bridge, context streaming | Active OSS |
 | [Onshape MCP](https://github.com/hedless/onshape-mcp) | Onshape | Programmatic CAD modeling and Onshape API workflows | Active OSS |
-| [Blender MCP](https://github.com/ahujasid/blender-mcp) | Blender | Scene manipulation, asset workflows, and 3D operations | Popular OSS |
+| [Jarvis Onshape MCP](https://github.com/ReshefElisha/jarvis-onshape-mcp) 🆕 | Onshape | Vision-decomposition, truth-telling, parametric iteration, FeatureScript | Built on top of hedless/onshape-mcp |
+| [Blender MCP](https://github.com/ahujasid/blender-mcp) | Blender | Scene manipulation, asset workflows, and 3D operations | Popular OSS / predates official |
+| [fusion-mcp-server](https://github.com/Joe-Spencer/fusion-mcp-server) 🆕 | Fusion 360 | Community MCP add-in for Fusion 360: sketches, parameters, components access via `bpy`-style tools | OSS (precedes official Autodesk MCP) |
+| [Fusion-360-MCP-Server](https://github.com/AuraFriday/Fusion-360-MCP-Server) 🆕 | Fusion 360 | Alternative community Fusion MCP; pairs with companion [cura_mcp](https://github.com/AuraFriday/cura_mcp) for slicing | OSS |
 | [KiCad MCP](https://github.com/lamaalrajih/kicad-mcp) | KiCad | Netlist, BOM, DRC, PCB visualization | Electronics |
 | [cadquery-mcp-server](https://github.com/rishigundakaram/cadquery-mcp-server) | CadQuery | Natural-language-to-parametric-CAD experiments | Experimental |
 | [mcp-cadquery](https://github.com/bertvanbrakel/mcp-cadquery) | CadQuery | Script execution, SVG export, part library workflows | Experimental |
-| [CAD-MCP](https://github.com/daobataotie/CAD-MCP) | AutoCAD / compatible CAD | Controls CAD tools through natural language | Experimental |
+| [CAD-MCP](https://github.com/daobataotie/CAD-MCP) | AutoCAD / GstarCAD / ZWCAD | Drives 2D CAD drawing through natural language | Active OSS |
 | [predictive-maintenance-mcp](https://github.com/LGDiMaggio/predictive-maintenance-mcp) | PdM | Vibration analysis, bearing fault detection, anomaly detection, ISO reports | Unique |
-| [Foam-Agent MCP](https://github.com/csml-rpi/Foam-Agent) | OpenFOAM | MCP/agentic workflows for OpenFOAM case setup and execution | Research/OSS |
+| [openfoam-mcp-server](https://github.com/webworn/openfoam-mcp-server) 🆕 | OpenFOAM | LLM-powered CFD education, Socratic questioning, mesh quality | OSS |
+| [STK-MCP](https://github.com/alti3/stk-mcp) 🆕 | Ansys/AGI STK | Digital mission engineering: scenarios, satellites, orbits, facilities | OSS |
 
 ---
 
@@ -297,8 +330,9 @@
 | [Siemens Fuse EDA AI Agent](https://news.siemens.com/en-us/siemens-fuse-eda-ai-agent/) | Autonomous / domain-scoped | Orchestrates workflows across semiconductor, 3D IC, and PCB design through manufacturing sign-off | ❌ |
 | [CoLab AutoReview](https://www.colabsoftware.com) | Agentic | Multi-step design review across drawings, CAD, and review history | ❌ |
 | [Leo AI](https://www.getleo.ai) | Copilot | Engineering Q&A and validation grounded in PLM and supplier/technical sources | ❌ |
-| [Foam-Agent](https://github.com/csml-rpi/Foam-Agent) | Research agent | Multi-agent OpenFOAM workflow automation from natural language | ✅ |
-| [SimuAgent](https://arxiv.org/abs/2601.05187) | Research agent | LLM-based Simulink modeling assistant with reinforcement learning | ✅ / Research |
+| [Monolith MCP Notebook Handler](https://www.monolithai.com) 🆕 | Agentic | LLM-driven engineering analysis through MCP on the Monolith platform | ❌ |
+| [Foam-Agent](https://github.com/csml-rpi/Foam-Agent) | Research agent | Multi-agent OpenFOAM workflow automation from natural language; exposes MCP tools | ✅ |
+| [SimuAgent](https://arxiv.org/abs/2601.05187) | Research agent | LLM-based Simulink modeling assistant with reinforcement learning | Research |
 | [NVIDIA NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit) | Framework | Framework for enterprise agent workflows with MCP/A2A support | ✅ |
 | [LangGraph](https://github.com/langchain-ai/langgraph) | Framework | Stateful multi-agent and workflow orchestration | ✅ |
 
@@ -415,15 +449,15 @@
 | Paper / model | Venue / year | Contribution |
 |---------------|--------------|-------------|
 | [Cadrille](https://arxiv.org/abs/2505.22914) | ICLR 2026 Oral | Multi-modal CAD reconstruction from point clouds, images, and text with online RL |
-| [Seek-CAD](https://arxiv.org/abs/2505.17702) | ICLR 2026 | Self-refined generative CAD using local DeepSeek-R1 inference, RAG, visual feedback, and CoT |
+| [Seek-CAD](https://arxiv.org/abs/2505.17702) | Preprint (under review) | Self-refined generative CAD using local DeepSeek-R1 inference, RAG, visual feedback, and CoT |
 | [ToolCAD](https://arxiv.org/abs/2604.07960) | 2026 preprint | Tool-using LLM agents for text-to-CAD with curriculum online RL and CAD-CoT |
 | [CAD-Llama](https://arxiv.org/abs/2505.04481) | CVPR 2025 | LLM framework for generating CAD parametric sequences in SPCC format |
 | [Text2CAD](https://arxiv.org/abs/2409.17106) | NeurIPS 2024 Spotlight | Sequential parametric CAD generation from beginner-to-expert text prompts |
 | [GenCAD-3D](https://arxiv.org/abs/2509.15246) | 2025 | CAD program generation from point clouds/meshes using multimodal latent alignment |
-| [HistCAD](https://arxiv.org/abs/2602.19171) | 2026 | Constraint-aware history-based CAD dataset with sequences, STEP B-Reps, native files, images, and annotations |
+| [HistCAD](https://arxiv.org/abs/2602.19171) | 2025 preprint | Constraint-aware history-based CAD dataset with sequences, STEP B-Reps, native files, images, and annotations |
 | [DeepCAD](https://github.com/ChrisWu1997/DeepCAD) | ICCV 2021 | Deep generative network for CAD command sequences |
 | [BrepGen](https://arxiv.org/abs/2401.15563) | 2024 | B-Rep model generation via diffusion |
-| [HNC for CAD](https://github.com/3dlg-hcvc/s2cad) | ICML 2023 | Hierarchical neural coding for controllable CAD generation |
+| [HNC for CAD](https://github.com/samxuxiang/hnc-cad) ✅ corregido | ICML 2023 | Hierarchical neural coding for controllable CAD generation |
 | [Point-E](https://github.com/openai/point-e) | 2023 | Point cloud generation from text/image prompts |
 
 </details>
@@ -439,10 +473,10 @@
 | [Modulus Sym](https://github.com/NVIDIA/modulus-sym) | NVIDIA 2023 | Symbolic PINNs and multiphysics framework |
 | [MetaOpenFOAM](https://arxiv.org/abs/2407.21320) | 2024 | LLM-based multi-agent framework for OpenFOAM CFD workflows |
 | [OpenFOAMGPT](https://arxiv.org/abs/2501.06327) | 2025 | RAG-augmented LLM agent for OpenFOAM-based CFD |
-| [Foam-Agent](https://arxiv.org/abs/2505.04997) | 2025 | Multi-agent OpenFOAM workflow automation with error correction |
+| [Foam-Agent 2.0](https://arxiv.org/abs/2509.18178) ✅ actualizado | NeurIPS 2025 ML4PS Workshop | End-to-end composable multi-agent framework for OpenFOAM, MCP-exposed |
 | [ChatCFD](https://arxiv.org/abs/2506.02019) | 2025 | End-to-end CFD agent with domain-specific structured thinking |
-| [CFDagent](https://arxiv.org/abs/2507.23693) | 2025 | Zero-shot multi-agent system for autonomous CFD simulation |
-| [SimuAgent](https://arxiv.org/abs/2601.05187) | 2026 | LLM-based Simulink modeling assistant with RL |
+| [CFDagent](https://arxiv.org/abs/2507.23693) | Physics of Fluids 2025 | Zero-shot multi-agent system for autonomous CFD simulation |
+| [SimuAgent](https://arxiv.org/abs/2601.05187) | 2026 preprint | LLM-based Simulink modeling assistant with RL |
 
 </details>
 
@@ -516,15 +550,17 @@
 
 | Entry | Decision | Reason |
 |-------|----------|--------|
+| `https://github.com/3dlg-hcvc/s2cad` | 🐛 Replaced | Wrong/non-existent repo previously used for HNC for CAD; correct repo is `samxuxiang/hnc-cad` (verified May 2026) |
 | `https://spectrallabs.co` | Removed | Wrong/suspicious domain; use `spectrallabs.ai` instead |
 | `https://cadscribe.co` | Removed | Broken/old domain; use `cadscribelabs.com` instead |
 | `https://www.lambdafunction.com` | Removed | Wrong/parked-style domain; use `lambdafunction.ai` instead |
 | `https://www.productivemachines.com` | Removed | Wrong domain; use `productivemachines.co.uk` instead |
 | `Kapow / kapow.ai` | Removed | Voice/chat assistant for local businesses; not engineering quoting or manufacturing software |
+| `Open Source Digital Twin` | Removed | Vague repo cluster with no specific maintained tool; awesome-digital-twins covers this space better |
 | Matmatch | Removed for now | Site/link instability during review; re-add only if the official site is stable and relevant |
 | Generic LangChain/CrewAI-only entries | Not core | Useful frameworks, but not engineering-specific unless tied to CAD/CAE/CAM workflows |
-| Visual text-to-3D tools as “CAD” | Reclassified | Tripo/Meshy are useful, but primarily mesh/asset generation unless paired with CAD/B-Rep conversion |
-| Small abandoned toy demos | Not core | Re-add only under “Experimental” if maintained and clearly useful to engineers |
+| Visual text-to-3D tools as "CAD" | Reclassified | Tripo/Meshy are useful, but primarily mesh/asset generation unless paired with CAD/B-Rep conversion |
+| Small abandoned toy demos | Not core | Re-add only under "Experimental" if maintained and clearly useful to engineers |
 
 ---
 
@@ -541,6 +577,9 @@ Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
 > [!WARNING]
 > **What does not belong:** pure software-dev tools, generic AI/ML frameworks without engineering application, unrelated business automation tools, domain-parked links, spam links, and abandoned projects with no engineering value.
+
+> [!CAUTION]
+> **Verification policy:** every link in this list was checked against live sources during the May 2026 audit. If a domain expires, a repo gets archived/abandoned, or an arXiv paper is withdrawn, the corresponding entry should be moved to the "Removed / Not Included" section so the same dead link does not get re-submitted.
 
 ---
 
