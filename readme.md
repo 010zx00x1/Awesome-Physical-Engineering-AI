@@ -156,6 +156,7 @@ AI that reviews engineering artifacts, generates technical documentation, retrie
 | [bananaz](https://www.bananaz.ai/)                 | CAD, drawing, BOM, and DFX review            | Engineering-focused document/CAD agents                 | Review findings, standards checks and change analysis     |      🔒      | **Production** |
 | [DraftAid](https://draftaid.io/)                   | Generate fabrication drawings from 3D CAD    | AI-assisted drawing automation                          | 2D engineering drawings and exports                       |      🔒      | **Production** |
 | [Leo AI](https://www.getleo.ai/)                   | Search and reason over engineering knowledge | Retrieval and reasoning over PLM/PDM/CAD/technical data | Part search, calculations and sourced engineering answers |      🔒      | **Production** |
+| [SuperNX](https://nxtolerance.com/) | Tolerance stack-up and fit-chain analysis on Siemens NX parts | LLM agent over extracted CAD geometry, fits and ISO 286/2768 standards | Traceable stack-up report and toleranced model |      🔒      | **Preview** |
 
 > [!NOTE]
 > This category is currently much more commercially concentrated than CAD generation or Physics ML. Weak OSS projects are not added merely to create artificial balance.
