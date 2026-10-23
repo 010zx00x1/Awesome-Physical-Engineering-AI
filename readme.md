@@ -511,6 +511,7 @@ These are important building blocks for engineering AI systems, but **they are n
 <details>
 <summary><b>Additive manufacturing infrastructure</b></summary>
 
+* [Lattice Lab](https://github.com/010zx00x1/lattice-lab) — **Experimental** browser-based lattice design: STL/STEP/3MF import, parametric lattice generation, bounded candidate search, approximate structural/thermal analysis, and STL/3MF export. Uses numerical and geometric methods; analysis and manufacturing checks are exploratory.
 * [PrusaSlicer](https://github.com/prusa3d/PrusaSlicer)
 * [CuraEngine](https://github.com/Ultimaker/CuraEngine)
 * [OctoPrint](https://github.com/OctoPrint/OctoPrint)
