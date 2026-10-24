@@ -446,6 +446,7 @@ These are important building blocks for engineering AI systems, but **they are n
 * [OpenSCAD](https://openscad.org/)
 * [KCL](https://zoo.dev/)
 * [PartCAD](https://github.com/partcad/partcad)
+* [Arris](https://github.com/arris-labs/arris)
 
 </details>
 
