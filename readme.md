@@ -196,6 +196,7 @@ Traditional solvers remain in [Engineering Foundations](#engineering-foundations
 | [Neural Concept](https://www.neuralconcept.com/)     | Predict physical behavior from 3D geometry                         | Geometric deep learning              | Aero, thermal and structural predictions                |      🔒      | **Production** |
 | [Monolith](https://www.monolithai.com/)              | Learn from test and simulation data                                | ML over engineering datasets         | Predictions, anomaly detection and test recommendations |      🔒      | **Production** |
 | [Cosmon Argus](https://www.cosmon.com/) | Coordinate CAD, simulation, and PLM tasks | Engineering agent operating native tool integrations | CAD edits, simulation setup, drawings, and workflow results | 🔒 | **Production** |
+| [Navier Prism](https://www.navier.ai/prism) | Set up, run, and post-process structural, CFD, and multiphysics simulations on local project files | Desktop engineering agent drives containerized open-source solvers (OpenFOAM, SU2, code_aster, CalculiX, Elmer, …) | Solver cases, runs, results, and reports in a native 3D viewer | 🔒 | **Production** |
 
 ### Physics-ML tooling
 
